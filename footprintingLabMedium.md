@@ -54,7 +54,7 @@ Sau vài lần thử thì tôi nhận ra phải chạy SQL bằng admin, sử d�
 
 ![image](https://github.com/user-attachments/assets/fafd31d1-5097-4166-8890-9b41cb4bf80c)
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/87bc5d3e-c0c9-4d89-ba8a-48141497cfaf)
 
 Và tôi đã tìm thấy user HTB!
 
