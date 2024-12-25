@@ -17,7 +17,7 @@ Sử dụng `ftp 10.129.220.245` để dùng ftp ở port 21:
 
 ![image](https://github.com/user-attachments/assets/aaa59aa1-39c0-45ee-b331-ecfa990cbbab)
 
-Vào thành công nhưng đi lanh quanh không tìm thấy gì hữu ích, sang port 2121 bằng ``:
+Vào thành công nhưng đi lanh quanh không tìm thấy gì hữu ích, sang port 2121 bằng `ftp 10.129.220.245 2121`:
 
 ![image](https://github.com/user-attachments/assets/73a847ab-9dca-469a-8577-e2a9a93eb145)
 
