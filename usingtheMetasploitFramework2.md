@@ -34,4 +34,4 @@ Tôi không thể chạy được hashdump, yêu cầu bị từ chối, sau khi
 
 ![image](https://github.com/user-attachments/assets/45347a0c-23fb-4329-93ac-2c0af73e8129)
 
-Chúng ta để ý fortiloggerservice.exe và migrate sang nó, sau đó có thể chạy được hashdump
+Chúng ta để ý fortiloggerservice.exe và migrate sang nó (vì tôi cần sang cái tiến trình có nhiều quyền hơn), sau đó có thể chạy được hashdump
