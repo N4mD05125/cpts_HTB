@@ -61,7 +61,8 @@ Trong lúc đợi rdp thì tôi thử chris:789456123 vào rdp bằng `xfreerdp 
 
 ![image](https://github.com/user-attachments/assets/01670950-2b50-4f40-b864-4cd138de5e0e)
 
-Không biết tại sao nhưng mà cái hydra nó không dính, hmm chắc kệ thôi:
+Lúc sao là ra rdp chris:789456123 bằng hydra:
 
-![image](https://github.com/user-attachments/assets/2e0a6f6a-2037-47fa-8b62-ba0df1e42007)
+![image](https://github.com/user-attachments/assets/f6503a4e-9a8d-4389-a35a-bda309f7d0ae)
+
 
