@@ -57,3 +57,11 @@ Với chris:789456123 thì vẫn như cái kia:
 
 ![image](https://github.com/user-attachments/assets/babb705d-4c63-4f46-9eb4-2b374083f66c)
 
+Trong lúc đợi rdp thì tôi thử chris:789456123 vào rdp bằng `xfreerdp /u:'chris' /p:'789456123' /v:10.129.167.69` và ngạc nhiên chưa, nó hoạt động:
+
+![image](https://github.com/user-attachments/assets/01670950-2b50-4f40-b864-4cd138de5e0e)
+
+Không biết tại sao nhưng mà cái hydra nó không dính, hmm chắc kệ thôi:
+
+![image](https://github.com/user-attachments/assets/2e0a6f6a-2037-47fa-8b62-ba0df1e42007)
+
