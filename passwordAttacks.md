@@ -28,3 +28,32 @@ Do tôi thấy có các user ở đây nên nghĩ chắc là 2 câu dưới cũn
 ![image](https://github.com/user-attachments/assets/6f9a261b-a5a0-46ef-9b71-64b88c8980cf)
 
 ![image](https://github.com/user-attachments/assets/7791c747-33e3-4773-bb78-c97ff7df3c71)
+
+![image](https://github.com/user-attachments/assets/e37b4403-0b97-4095-97b8-0019950f4561)
+
+Chạy `hydra -L username.list -P password.list rdp://10.129.167.69` để vét cạn dịch vụ rdp:
+
+![image](https://github.com/user-attachments/assets/a114d8b8-39a9-4f76-830e-c2d386483e6e)
+
+Do lâu quá nên tôi tiện thể làm luôn smb `hydra -L user.list -P password.list smb://10.129.167.69`:
+
+![image](https://github.com/user-attachments/assets/30442210-f5b2-4653-91fa-60f50fb122bb)
+
+Cơ mà nó bị invalid và tra google thì ra như này [here](https://bugs.kali.org/view.php?id=6709):
+
+![image](https://github.com/user-attachments/assets/ec4ebe92-1c3a-452a-9e1d-a5a5824d4b27)
+
+Vậy nên tôi sử dụng msfconsole
+
+![image](https://github.com/user-attachments/assets/522162d8-0f80-4aa1-8a1a-622123d2d8c3)
+
+![image](https://github.com/user-attachments/assets/8bf8b30b-ca0e-4c16-b74a-2303c4883de3)
+
+Có đến hẳn 2 cái luôn cassie:12345678910 và chris:789456123, thử với cassie:12345678910 thì ra flag:
+
+![image](https://github.com/user-attachments/assets/ea6f50d0-7a32-4e1e-94ee-873caab957b9)
+
+Với chris:789456123 thì vẫn như cái kia:
+
+![image](https://github.com/user-attachments/assets/babb705d-4c63-4f46-9eb4-2b374083f66c)
+
