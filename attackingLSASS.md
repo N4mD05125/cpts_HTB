@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f3984574-ea0d-4d86-a91b-72b84ae91ea3)<h1>Attacking LSASS</h1>
+<h1>Attacking LSASS</h1>
 
 ![image](https://github.com/user-attachments/assets/cef1a406-7037-4174-ab60-27b9364d20f0)
 
