@@ -18,4 +18,16 @@ Dùng `crackmapexec smb 10.129.202.85 -u user.txt -p /usr/share/wordlists/fasttr
 
 ![image](https://github.com/user-attachments/assets/1cca2717-f0c8-4aec-8827-cfa8bb2a6a43)
 
+Sau 1 lúc thì có cjohnson:Welcome1212 :
+
+![image](https://github.com/user-attachments/assets/539d30ca-105d-4194-9154-fec1ea88fa65)
+
+Dùng lệnh `evil-winrm -i 10.129.202.85  -u 'cjohnson' -p 'Welcome1212''` kết nối vào thôi:
+
+Không hiểu sao target bảo không đúng, chạy thử `crackmapexec smb 10.129.42.197 -u "cjohnson" -p "Welcome1212" --shares` cũng chả có gì, đi tìm trên forum thì thấy bảo dùng metasploit để chạy:
+
+![image](https://github.com/user-attachments/assets/04304609-a2f0-4a99-90c1-a891d374ff6f)
+
+![image](https://github.com/user-attachments/assets/b89c256b-f563-4f13-9f7f-62b88982d55d)
+
 
