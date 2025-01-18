@@ -35,3 +35,8 @@ Và bắt đầu brute force thôi ` hashcat -m 1800 -a 0 ./unshadowed.hashes ..
 Mới được 6.81% sau 15p, lâu điênn
 
 ![image](https://github.com/user-attachments/assets/1708f769-1654-4cdf-b3c9-0a68dcf5572d)
+
+100% cpu:
+
+![image](https://github.com/user-attachments/assets/19332d2f-8d41-43be-8d50-072f0cd4e130)
+
