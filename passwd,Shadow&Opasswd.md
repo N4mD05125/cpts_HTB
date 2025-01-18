@@ -40,3 +40,11 @@ Mới được 6.81% sau 15p, lâu điênn
 
 ![image](https://github.com/user-attachments/assets/19332d2f-8d41-43be-8d50-072f0cd4e130)
 
+Tôi thử lên mạng rồi dùng hashcat thông qua gpu thay vì cpu bằng cách tải cuda nvidia các thứ và chạy `hashcat.exe -d 2 -m 1800 -a 0 ../target/unshadowed.hashes ../target/rockyou.txt -o ../target/unshadowed.cracked`, check gpu bằng `hashcat -I` :
+
+![image](https://github.com/user-attachments/assets/bc084912-25ac-41fd-b3fd-d2ec85681c65)
+
+Và tôi cảm giác tốc độ vẫn vậy :(
+
+![image](https://github.com/user-attachments/assets/727ede39-75af-418c-bc5b-b4685a4aa790)
+
