@@ -48,3 +48,17 @@ Và tôi cảm giác tốc độ vẫn vậy :(
 
 ![image](https://github.com/user-attachments/assets/727ede39-75af-418c-bc5b-b4685a4aa790)
 
+Vãi, chạy gần 30p mà không có gì:
+
+![image](https://github.com/user-attachments/assets/3d1c9bad-9a95-40a8-b74e-8ebaa6b1835e)
+
+Đi đọc hint trên forum thì tôi thấy bảo là dùng cái biến thể của password.list kia `hashcat --force password.list -r custom.rule --stdout | sort -u > mut_password.list` và thu được 2 kết quả:
+
+![image](https://github.com/user-attachments/assets/91a07f15-40c7-4246-bd59-ba5dead18457)
+
+![image](https://github.com/user-attachments/assets/863c47a6-2f38-4fc5-b825-54adc669b133)
+
+Và cái J0rd@n5 là của root:
+
+![image](https://github.com/user-attachments/assets/0b430d56-6f0a-4098-ad1a-cb79f25be113)
+
