@@ -103,4 +103,15 @@ Tiếp theo là case7:
 ![image](https://github.com/user-attachments/assets/bba9e7d1-a381-4c97-ad3f-a1b62375bdd1)
 
 Lâu điênnn, à có thể dùng lệnh `sqlmap -r req.txt --batch --dump -T flag7 -D testdb --no-cast --level=5 --risk=3 --union-cols=5 --dbms=MySQL` cho chạy nhanh hơn!
+<br>
+Quay lại case1, do bố cục bài nó thế chứ không phải tôi thích thế:
+
+![image](https://github.com/user-attachments/assets/5a27e41d-eeb7-449b-9052-3a10200416bc)
+
+![image](https://github.com/user-attachments/assets/c820975c-1ed1-4a5c-a056-6ceb412028b3)
+
+![image](https://github.com/user-attachments/assets/6faa0865-d491-47b0-97e1-45917b8f6f11)
+
+![image](https://github.com/user-attachments/assets/bf9aae8c-8fa0-4206-9ff3-02d6e9e36e55)
+
 
