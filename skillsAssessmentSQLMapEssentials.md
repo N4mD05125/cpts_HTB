@@ -37,3 +37,17 @@ Dùng lệnh `sqlmap -r req.txt -T final_flag --dump-all --batch --level=5 --ris
 Thôi thì chơi theo kiểu time-based blind thôi:
 
 ![image](https://github.com/user-attachments/assets/f7378d16-c289-49cf-931e-f6ac598cf805)
+
+HTB bảo sai flag mặc dù tôi có để htb hay HTB:
+
+![image](https://github.com/user-attachments/assets/53c030cd-8c53-4745-a503-c928dda91f42)
+
+![image](https://github.com/user-attachments/assets/6f18f1bf-7b3c-4da2-802d-c1f8b52dfc11)
+
+Về sau bảo chatgpt check code thì chatgpt bảo dùng full các kí tự từ 32 đến 127 cho chắc cú:
+
+![image](https://github.com/user-attachments/assets/e58213dd-cd77-4ff0-96c1-190d0797efb7)
+
+![image](https://github.com/user-attachments/assets/62b2a5d8-9aa4-4456-b36f-4f21336d7757)
+
+Flag có thêm ?! mới đau
