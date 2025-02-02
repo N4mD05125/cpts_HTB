@@ -69,7 +69,7 @@ Thử với nginx thì ra được acccess.log:
 
 ![image](https://github.com/user-attachments/assets/0c3bf9f8-44cb-4607-b68f-6e9c0a74344b)
 
-Đổi User-Agent: <?php system('ls /'); ?> để chạy ls:
+Đổi User-Agent: `<?php system('ls /'); ?>` để chạy ls:
 
 ![image](https://github.com/user-attachments/assets/47249b84-8db7-4a95-a5fa-44f0276b4036)
 
