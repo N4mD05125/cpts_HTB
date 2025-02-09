@@ -53,10 +53,6 @@ Việc brute otp có vẻ không ổn, tôi thử bật intercept lên để ch�
 
 ![image](https://github.com/user-attachments/assets/bb68372f-9986-4981-ba87-1484d256f1e5)
 
-![image](https://github.com/user-attachments/assets/eae0d4d3-96e9-4aae-95ad-9881eb21ab62)
-
-![image](https://github.com/user-attachments/assets/9897ea89-c250-4147-a427-3139d6e3d86d)
-
 Khi tôi cố tình bỏ qua 2fa.php để truy cập vào profile.php thì nó bị chuyển hướng quay lại 2fa.php
 
 ![image](https://github.com/user-attachments/assets/149b6eb0-b6e6-40cb-93a0-7168d5552305)
