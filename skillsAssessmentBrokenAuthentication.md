@@ -49,7 +49,7 @@ Tôi để ý khi tôi nhập otp thì ở web thì nó có status code là 200,
 
 ![image](https://github.com/user-attachments/assets/e1521428-fc20-4c10-9875-45133c73bd8f)
 
-Việc brute otp có vẻ không ổn, tôi thử bật intercept lên để chặn lại lúc login:
+Việc brute otp có vẻ không ổn, tôi thử dùng cách khác:
 
 ![image](https://github.com/user-attachments/assets/bb68372f-9986-4981-ba87-1484d256f1e5)
 
